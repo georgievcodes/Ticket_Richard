@@ -1,0 +1,57 @@
+﻿@using Ticket_Richard.Models;
+@(Html.Kendo().DataSource<OrderViewModel>()
+        .Name("myDataSource")
+        .Ajax(dataSource => dataSource
+          .Read(read => read.Action("Orders_Read", "Grid"))
+        )
+    )
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="mb-2">
+    @(Html.Kendo().DropDownList()
+        .Name("dropDownList")
+        .DataSource(dataSource => dataSource
+        .Read(read => read
+        .Action("DropDownListData", "Grid")))
+        .SelectedIndex(0)
+        .HtmlAttributes(new { style = "width:200px;" })
+        .OptionLabel("Show All")
+        .Events(e => e.Change("onChange"))
+        )
+</div>
+
+<div>
+        @(Html.Kendo().Grid<OrderViewModel>()
+            .Name("grid")
+            .Columns(columns =>
+            {
+                columns.Bound(p => p.OrderID).Filterable(false);
+                columns.Bound(p => p.Freight);
+                columns.Bound(p => p.OrderDate).Format("{0:MM/dd/yyyy}");
+                columns.Bound(p => p.ShipName);
+                columns.Bound(p => p.ShipCity);
+            })
+            .Pageable()
+            .ColumnMenu()
+            .Selectable(selectable => selectable
+            .Mode(GridSelectionMode.Single)
+            .Type(GridSelectionType.Row))
+            .HtmlAttributes(new { style = "height:550px;" })
+            .DataSource("myDataSource")
+            )
+</div>
+
+<script>
+    function onChange(e) {
+        var dataItem = this.dataItem(e.item);
+        if (dataItem == "Show All") {
+            dataItem = "";
+        }
+        $("#grid").data("kendoGrid").dataSource.filter({ field: "ShipCity", operator: "contains", value: dataItem });
+        return;
+    }
+</script>
+
+
