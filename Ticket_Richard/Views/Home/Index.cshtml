@@ -3,6 +3,7 @@
         .Name("myDataSource")
         .Ajax(dataSource => dataSource
           .Read(read => read.Action("Orders_Read", "Grid"))
+          .PageSize(10)
         )
     )
 @{
