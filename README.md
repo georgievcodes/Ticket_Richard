@@ -116,18 +116,18 @@ Special case is added to take care of the `Show All` default option of the list,
 
 Greetings Richard,
 
-Sorry to hear that you have encountered issues. Our team strive to provide not only an excellent product but also the tools needed to ensure a smooth and seamless product experience. Documentation is one of the aspects we are constantly trying to improve and we will appriciate any comments or suggestions you may have.
+Sorry to hear that you have encountered issues. Our team strive to provide not only an excellent product, but also the tools needed to ensure a smooth and seamless product experience. I have passed your feedback to the team. We are thinking of ways to improve the articles related to Grid data-binding and external filtering to be more comprehensive so that they don't cause an issue for the next person using the docs.
 
-On to the issue at hand. I have created a demo project with all the features you've mentioned. In the readme file you can find extra info about the used components.
+On to the issue at hand. I have created a demo project with all the features you've mentioned. In the README file you can find extra info about the used components.
 
 [Click this link to go the demo repository](https://github.com/georgievcodes/Ticket_Richard)
 
-I hope the demo has all the info you require. Should any other issues or questions arise feel free to contact us again, we are here to assist.  
-In addition you can check the links bellow for extra info and functionalities you might want to add.
+I hope the demo has all the info you require. Should any other issues or questions arise, feel free to contact us again, we are here to assist.  
+In addition, you can check the next few links for extra info and functionalities you might want to add.
 
 [Grid component](https://demos.telerik.com/aspnet-core/grid)  
 [DropDownList component](https://demos.telerik.com/aspnet-core/dropdownlist)  
 [DataSource component](https://demos.telerik.com/aspnet-core/datasource)
 
 Regards,  
-Georgie Georgiev - SupportTeam™
+Georgi Georgiev - SupportTeam™
